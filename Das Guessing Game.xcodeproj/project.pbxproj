@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE248CBB200E833A00ED485C /* GuessingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE248CBA200E833A00ED485C /* GuessingGame.swift */; };
 		CECDF90A200A5A6E0061FC89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDF909200A5A6E0061FC89 /* AppDelegate.swift */; };
 		CECDF90C200A5A6E0061FC89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECDF90B200A5A6E0061FC89 /* ViewController.swift */; };
 		CECDF90F200A5A6E0061FC89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECDF90D200A5A6E0061FC89 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE248CBA200E833A00ED485C /* GuessingGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingGame.swift; sourceTree = "<group>"; };
 		CECDF906200A5A6E0061FC89 /* Das Guessing Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Das Guessing Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECDF909200A5A6E0061FC89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECDF90B200A5A6E0061FC89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				CECDF910200A5A6E0061FC89 /* Assets.xcassets */,
 				CECDF912200A5A6E0061FC89 /* LaunchScreen.storyboard */,
 				CECDF915200A5A6E0061FC89 /* Info.plist */,
+				CE248CBA200E833A00ED485C /* GuessingGame.swift */,
 			);
 			path = "Das Guessing Game";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECDF90C200A5A6E0061FC89 /* ViewController.swift in Sources */,
+				CE248CBB200E833A00ED485C /* GuessingGame.swift in Sources */,
 				CECDF90A200A5A6E0061FC89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
