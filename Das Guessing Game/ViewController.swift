@@ -39,12 +39,16 @@ class ViewController: UIViewController {
             //If the input was nil, stop and return (exit) the function
             return
         }
+        
         //Use a guard statement to atteplt to create and integer
         guard let integerGiven = Int(inputGiven) else {
             // If the input was text (E.g: "Five") we can't make and integer, so stop and return (exit) the function
             return
         }
-        
+        guard case messageToUser.text = game.checkGuessGiveFeedback(guess: integerGiven) else {
+            return
+        }
+
         //Print the number that was guessed again
         print(integerGiven)
         //The number to guess is:

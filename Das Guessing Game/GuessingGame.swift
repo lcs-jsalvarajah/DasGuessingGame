@@ -16,4 +16,13 @@ struct GuessingGame {
         //Generate the Random number
         numberToGuess = Int(arc4random_uniform(501)) // get a number between 0 and 500
     }
+    func checkGuessGiveFeedback(guess : Int) -> String {
+        if numberToGuess > guess {
+            print("To High"); else do {
+                print("Too Low")
+            }
+        }
+    }
 }
+//Mark Functions
+
