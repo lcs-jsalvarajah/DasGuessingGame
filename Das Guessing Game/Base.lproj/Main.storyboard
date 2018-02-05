@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,39 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBQ-iV-JFV">
-                                <rect key="frame" x="112" y="249" width="97" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRG-aV-Hnn">
-                                <rect key="frame" x="112" y="364" width="97" height="30"/>
-                                <state key="normal" title="Make Gessing"/>
-                                <connections>
-                                    <action selector="guessSubmitted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQb-Z0-1g5"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-Zl-Xrc">
-                                <rect key="frame" x="75" y="0.0" width="171" height="152"/>
-                                <string key="text">I be think of number. 
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IKe-5D-9xv" userLabel="Vertical Stack View">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-Zl-Xrc">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="189.5"/>
+                                        <string key="text">I be think of number. 
          Guess It!</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRG-aV-Hnn">
+                                        <rect key="frame" x="0.0" y="189.5" width="0.0" height="189"/>
+                                        <state key="normal" title="Make Gessing"/>
+                                        <connections>
+                                            <action selector="guessSubmitted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQb-Z0-1g5"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyw-u2-GXv" userLabel="View to make NI smaller">
+                                        <rect key="frame" x="0.0" y="378.5" width="0.0" height="189.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBQ-iV-JFV">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="142"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="eBQ-iV-JFV" secondAttribute="trailing" constant="320" id="76o-H4-c12"/>
+                                            <constraint firstItem="eBQ-iV-JFV" firstAttribute="leading" secondItem="dyw-u2-GXv" secondAttribute="leading" id="d38-qQ-rEO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eBQ-iV-JFV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="00X-ef-Xwg"/>
-                            <constraint firstItem="xRG-aV-Hnn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="2Ju-Rg-6rW"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="eBQ-iV-JFV" secondAttribute="bottom" constant="289" id="Hu7-S6-gOv"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="xRG-aV-Hnn" secondAttribute="bottom" constant="174" id="Yif-eF-z0o"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Oe8-Zl-Xrc" secondAttribute="trailing" constant="58" id="ag6-Ja-4il"/>
-                            <constraint firstItem="Oe8-Zl-Xrc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="bCw-Jo-uwF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xRG-aV-Hnn" secondAttribute="trailing" constant="95" id="i0f-HD-qLR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eBQ-iV-JFV" secondAttribute="trailing" constant="95" id="nmF-rS-4fT"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Oe8-Zl-Xrc" secondAttribute="bottom" constant="416" id="z3S-Bl-vCo"/>
+                            <constraint firstItem="IKe-5D-9xv" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Kjo-wz-OhC"/>
+                            <constraint firstItem="IKe-5D-9xv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NGk-Ll-75r"/>
+                            <constraint firstItem="IKe-5D-9xv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Ofw-jR-Yy4"/>
+                            <constraint firstItem="IKe-5D-9xv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="grC-1g-wSs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
