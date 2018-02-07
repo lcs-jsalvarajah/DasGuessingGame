@@ -45,15 +45,16 @@ class ViewController: UIViewController {
             // If the input was text (E.g: "Five") we can't make and integer, so stop and return (exit) the function
             return
         }
-        guard case messageToUser.text = game.checkGuessGiveFeedback(guess: integerGiven) else {
-            return
-        }
+       
 
         //Print the number that was guessed again
         print(integerGiven)
         //The number to guess is:
         print("The Number to Guess is:")
         print(game.numberToGuess)
+        
+        // Compare the numbers
+        print(game.compareGuessMade(providedGuess: integerGiven))
     }
     //MARK: Custom Function(s)
 
